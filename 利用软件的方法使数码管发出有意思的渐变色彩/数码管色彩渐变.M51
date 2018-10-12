@@ -1,0 +1,110 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/03/2017  21:02:42  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\\C51\BIN\BL51.EXE 数码管色彩渐变.obj TO 数码管色彩渐变 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  数码管色彩渐变.obj (数_牍_色彩渐盻)
+  E:\\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  数码管色彩渐变 (数_牍_色彩渐盻)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         _DATA_GROUP_
+            IDATA   0010H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0065H     UNIT         ?PR?MAIN?数_牍_色彩渐盻
+            CODE    0068H     002BH     UNIT         ?PR?_DELAY?数_牍_色彩渐盻
+            CODE    0093H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   数码管色彩渐变 (数_牍_色彩渐盻)
+
+
+SEGMENT                             DATA_GROUP 
+  +--> CALLED SEGMENT             START    LENGTH
+-------------------------------------------------
+?C_C51STARTUP                     -----    -----
+  +--> ?PR?MAIN?数_牍_色彩渐盻
+
+?PR?MAIN?数_牍_色彩渐盻           0008H    0006H
+  +--> ?PR?_DELAY?数_牍_色彩渐盻
+
+?PR?_DELAY?数_牍_色彩渐盻         000EH    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  数码管色彩渐变 (数_牍_色彩渐盻)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        数_牍_色彩渐盻
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/03/2017  21:02:42  PAGE 2
+
+
+  D:00A8H         PUBLIC        IE
+  C:0068H         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+  C:0003H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00A0H.2       PUBLIC        a
+  B:00A0H.3       PUBLIC        b
+  B:00A0H.4       PUBLIC        c
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        j
+  D:000AH         SYMBOL        i
+  D:000CH         SYMBOL        k
+  -------         ENDDO         
+  C:0003H         LINE#         9
+  C:0003H         LINE#         10
+  C:0003H         LINE#         11
+  C:0003H         LINE#         13
+  C:0009H         LINE#         14
+  C:000FH         LINE#         15
+  C:0015H         LINE#         16
+  C:001DH         LINE#         17
+  C:0025H         LINE#         18
+  C:0027H         LINE#         19
+  C:002AH         LINE#         20
+  C:0031H         LINE#         21
+  -------         ENDPROC       MAIN
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        x
+  -------         DO            
+  D:0006H         SYMBOL        e
+  D:000EH         SYMBOL        f
+  -------         ENDDO         
+  C:0068H         LINE#         24
+  C:0068H         LINE#         25
+  C:0068H         LINE#         27
+  C:0073H         LINE#         28
+  C:0092H         LINE#         29
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        数_牍_色彩渐盻
+
+Program Size: data=17.0 xdata=0 code=159
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

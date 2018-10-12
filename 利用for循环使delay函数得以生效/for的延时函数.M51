@@ -1,0 +1,95 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/15/2017  09:27:29  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\\C51\BIN\BL51.EXE for的延时函数.obj TO for的延时函数 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  for的延时函数.obj (FOR的延时篲数)
+  E:\\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  for的延时函数 (FOR的延时篲数)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0020H     UNIT         ?PR?_DELAY?FOR的延时篲数
+            CODE    0023H     000DH     UNIT         ?PR?MAIN?FOR的延时篲数
+            CODE    0030H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   for的延时函数 (FOR的延时篲数)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?FOR的延时篲数
+
+?PR?MAIN?FOR的延时篲数
+  +--> ?PR?_DELAY?FOR的延时篲数
+
+
+
+SYMBOL TABLE OF MODULE:  for的延时函数 (FOR的延时篲数)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        FOR的延时篲数
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:0003H         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+  C:0023H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/15/2017  09:27:29  PAGE 2
+
+
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00A0H.0       PUBLIC        led
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0023H         LINE#         4
+  C:0023H         LINE#         5
+  C:0023H         LINE#         6
+  C:0023H         LINE#         7
+  C:0023H         LINE#         8
+  C:0025H         LINE#         9
+  C:002CH         LINE#         10
+  C:002EH         LINE#         12
+  -------         ENDPROC       MAIN
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        x
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0003H         LINE#         14
+  C:0003H         LINE#         15
+  C:0003H         LINE#         17
+  C:000EH         LINE#         18
+  C:0022H         LINE#         19
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        FOR的延时篲数
+
+Program Size: data=9.0 xdata=0 code=60
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

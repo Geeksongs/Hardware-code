@@ -1,0 +1,130 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/12/2017  17:43:52  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\\C51\BIN\BL51.EXE Õ‚≤ø÷–∂œ.obj TO Õ‚≤ø÷–∂œ RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  Õ‚≤ø÷–∂œ.obj (Õ_≤ø_–∂œ)
+  E:\\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  Õ‚≤ø÷–∂œ (Õ_≤ø_–∂œ)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     0050H     UNIT         ?PR?INT0?Õ_≤ø_–∂œ
+            CODE    0056H     0022H     UNIT         ?PR?_DELAY?Õ_≤ø_–∂œ
+            CODE    0078H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0084H     0007H     UNIT         ?PR?ZHONGDUAN0?Õ_≤ø_–∂œ
+            CODE    008BH     0005H     UNIT         ?PR?MAIN?Õ_≤ø_–∂œ
+
+
+
+OVERLAY MAP OF MODULE:   Õ‚≤ø÷–∂œ (Õ_≤ø_–∂œ)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?INT0?Õ_≤ø_–∂œ
+  +--> ?PR?_DELAY?Õ_≤ø_–∂œ
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?Õ_≤ø_–∂œ
+
+?PR?MAIN?Õ_≤ø_–∂œ
+  +--> ?PR?ZHONGDUAN0?Õ_≤ø_–∂œ
+
+
+
+SYMBOL TABLE OF MODULE:  Õ‚≤ø÷–∂œ (Õ_≤ø_–∂œ)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        Õ_≤ø_–∂œ
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/12/2017  17:43:52  PAGE 2
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:0084H         PUBLIC        zhongduan0
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  C:0056H         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+  C:008BH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00A0H.2       PUBLIC        led
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  D:00C8H         PUBLIC        T2CON
+  B:00B0H.2       PUBLIC        k
+  D:00D0H         PUBLIC        PSW
+  C:0006H         PUBLIC        int0
+  -------         PROC          ZHONGDUAN0
+  C:0084H         LINE#         5
+  C:0084H         LINE#         6
+  C:0084H         LINE#         7
+  C:0086H         LINE#         8
+  C:0088H         LINE#         9
+  C:008AH         LINE#         10
+  -------         ENDPROC       ZHONGDUAN0
+  -------         PROC          MAIN
+  C:008BH         LINE#         12
+  C:008BH         LINE#         13
+  C:008BH         LINE#         14
+  C:008EH         LINE#         15
+  -------         ENDPROC       MAIN
+  -------         PROC          INT0
+  C:0006H         LINE#         18
+  C:0023H         LINE#         20
+  C:0026H         LINE#         21
+  C:0026H         LINE#         22
+  C:002DH         LINE#         23
+  C:0030H         LINE#         24
+  C:0030H         LINE#         25
+  C:0032H         LINE#         26
+  C:0039H         LINE#         27
+  C:003BH         LINE#         29
+  C:003BH         LINE#         31
+  C:003BH         LINE#         32
+  -------         ENDPROC       INT0
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        x
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0056H         LINE#         33
+  C:0056H         LINE#         34
+  C:0056H         LINE#         36
+  C:0061H         LINE#         37
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/12/2017  17:43:52  PAGE 3
+
+
+  C:0077H         LINE#         38
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        Õ_≤ø_–∂œ
+
+Program Size: data=9.0 xdata=0 code=144
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

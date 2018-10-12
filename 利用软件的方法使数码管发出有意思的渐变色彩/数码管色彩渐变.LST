@@ -1,0 +1,23 @@
+C51 COMPILER V9.01   数_牍_色彩渐盻                                                        10/03/2017 21:02:42 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE 数_牍_色彩渐盻
+OBJECT MODULE PLACED IN 数码管色彩渐变.OBJ
+COMPILER INVOKED BY: E:\C51\BIN\C51.EXE 数码管色彩渐变.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    144    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       8
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

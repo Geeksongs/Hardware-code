@@ -1,0 +1,23 @@
+C51 COMPILER V9.01   FOR的延时篲数                                                         09/15/2017 09:27:29 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE FOR的延时篲数
+OBJECT MODULE PLACED IN for的延时函数.OBJ
+COMPILER INVOKED BY: E:\C51\BIN\C51.EXE for的延时函数.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     45    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
