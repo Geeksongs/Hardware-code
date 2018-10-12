@@ -1,0 +1,106 @@
+C51 COMPILER V9.00   显示滚禵汉譥                                                          12/10/2017 19:52:39 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE 显示滚禵汉譥
+OBJECT MODULE PLACED IN 显示滚动汉字.OBJ
+COMPILER INVOKED BY: E:\C51\BIN\C51.EXE 显示滚动汉字.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1            //该板子上的点阵为8*8，只能显示简单的一些汉子，如果要显示真正的汉字
+   2          //通过取模软件取的可以选择16*16点阵的板子
+   3          
+   4          #include<reg51.h>
+   5          #include<intrins.h>
+   6          
+   7          sbit SRCLK=P3^6;
+   8          sbit RCLK=P3^5;
+   9          sbit SER=P3^4;
+  10          
+  11          //--定义要使用的IO口--//
+  12          #define COMMONPORTS             P0
+  13          
+  14          //--列选通控制--//
+  15          unsigned char code TAB[8]  = {0x7f,0xbf,0xdf,0xef,0xf7,0xfb,0xfd,0xfe};
+  16          
+  17          //--点阵字码--//
+  18          unsigned char code CHARCODE[6][8]=
+  19          {
+  20          
+  21          0x00,0x12,0x14,0x78,0x14,0x12,0x00,0x00,  //大
+  22          0x24,0x3e,0x40,0x32,0x04,0x78,0x14,0x22,   //伙 
+  23          0x00,0xe9,0xaa,0xac,0xaa,0xe9,0x00,0x00,        //ok
+  24          0x00,0x1c,0x08,0x08,0x08,0x08,0x1c,0x00,//I     
+  25          0x00,0x00,0x77,0x49,0x41,0x22,0x14,0x08,//心形                                                                  
+  26          {0x08,0x44,0xdf,0x56,0x4e,0x55,0x4c,0x44}  //你
+  27          
+  28          };
+  29          void delay(unsigned int time)
+  30          {
+  31   1        unsigned int i,j;
+  32   1        for(i=0;i<time;i++)
+  33   1          for(j=0;j<121;j++);
+  34   1      }
+  35          void Hc595SendByte(unsigned char dat)
+  36          {
+  37   1              unsigned char a;
+  38   1              SRCLK=0;
+  39   1              RCLK=0;
+  40   1              for(a=0;a<8;a++)
+  41   1              {
+  42   2                      SER=dat>>7;
+  43   2                      dat<<=1;
+  44   2      
+  45   2                      SRCLK=1;
+  46   2                      _nop_();
+  47   2                      _nop_();
+  48   2                      SRCLK=0;        
+  49   2              }
+  50   1      
+  51   1              RCLK=1;
+  52   1              _nop_();
+  53   1              _nop_();
+  54   1              RCLK=0;}
+  55          
+C51 COMPILER V9.00   显示滚禵汉譥                                                          12/10/2017 19:52:39 PAGE 2   
+
+  56          void main()
+  57          {       
+  58   1              unsigned char tab, j;
+  59   1              unsigned int  i;
+  60   1      
+  61   1              while(1)
+  62   1              {       
+  63   2                      for(i= 0; i<50; i++ )   //两个字之间的扫描间隔时间
+  64   2                      {
+  65   3                              for(tab=0;tab<8;tab++)
+  66   3                              {       
+  67   4      
+  68   4                                      Hc595SendByte(0x00);                         //消隐                                                                                                                             
+  69   4                                      COMMONPORTS     = TAB[tab];                              //输出字码     
+  70   4                                      Hc595SendByte(CHARCODE[j][tab]);        
+  71   4                                      delay(2);               
+  72   4                              }
+  73   3                               
+  74   3                      }
+  75   2                      j++;
+  76   2                      if(j == 6)
+  77   2                      {
+  78   3                              j = 0;
+  79   3                      }
+  80   2              }       
+  81   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    160    ----
+   CONSTANT SIZE    =     56    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       3
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
