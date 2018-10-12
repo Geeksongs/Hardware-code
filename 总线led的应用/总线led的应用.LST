@@ -1,0 +1,33 @@
+C51 COMPILER V9.00   譥线LED的应用                                                         12/06/2017 21:20:56 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE 譥线LED的应用
+OBJECT MODULE PLACED IN 总线led的应用.OBJ
+COMPILER INVOKED BY: E:\C51\BIN\C51.EXE 总线led的应用.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          void main()
+   3          {
+   4   1              P2=0x0;
+   5   1              while(1);       //利用十六进制的方法又快又简单，如果成功，那么我更上了一层楼也！
+   6   1      
+   7   1      
+   8   1      
+   9   1      
+  10   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      5    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

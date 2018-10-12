@@ -1,0 +1,59 @@
+C51 COMPILER V9.01   _Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ                                                  09/22/2017 23:26:15 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE _Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ
+OBJECT MODULE PLACED IN ÖÆ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ.OBJ
+COMPILER INVOKED BY: E:\C51\BIN\C51.EXE ÖÆ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          sbit beep=P1^5;
+   3          void fun(int x);
+   4          void main()
+   5          {       int i;
+   6   1              i=10;
+   7   1              while(1)
+   8   1              {
+   9   2              while(i<=10000000){
+  10   3              beep=0;
+  11   3              fun(1);
+  12   3              beep=1;
+  13   3              fun(1);
+  14   3              i++;
+  15   3      
+  16   3              
+  17   3              }
+  18   2              fun(1000);
+  19   2              while(i<=20000000)
+  20   2              {
+  21   3              beep=0;
+  22   3              fun(2);
+  23   3              beep=1;
+  24   3              fun(2);
+  25   3              i++;
+  26   3              
+  27   3              
+  28   3              }
+  29   2              fun(1000);
+  30   2              }}
+  31          void fun(int x)
+  32          {
+  33   1              int i,j;
+  34   1              for(i=x;i>0;i--)
+  35   1                      for(j=110;j>0;j--);
+  36   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    158    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

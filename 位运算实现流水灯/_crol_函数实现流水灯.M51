@@ -1,0 +1,108 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/06/2017  22:29:13  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\\C51\BIN\BL51.EXE _crol_函数实现流水灯.obj TO _crol_函数实现流水灯 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  _crol_函数实现流水灯.obj (_CROL_篲数实蟔流水灯)
+  E:\\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  _crol_函数实现流水灯 (_CROL_篲数实蟔流水灯)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0048H     UNIT         ?PR?MAIN?_CROL_篲数实蟔流水灯
+            CODE    004BH     001DH     UNIT         ?PR?DELAY?_CROL_篲数实蟔流水灯
+            CODE    0068H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   _crol_函数实现流水灯 (_CROL_篲数实蟔流水灯)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?_CROL_篲数实蟔流水灯
+
+?PR?MAIN?_CROL_篲数实蟔流水灯
+  +--> ?PR?DELAY?_CROL_篲数实蟔流水灯
+
+
+
+SYMBOL TABLE OF MODULE:  _crol_函数实现流水灯 (_CROL_篲数实蟔流水灯)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        _CROL_篲数实蟔流水灯
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:004BH         PUBLIC        delay
+  D:00B8H         PUBLIC        IP
+  C:0003H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/06/2017  22:29:13  PAGE 2
+
+
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        j
+  D:0004H         SYMBOL        k
+  -------         ENDDO         
+  C:004BH         LINE#         3
+  C:004BH         LINE#         4
+  C:004BH         LINE#         6
+  C:004EH         LINE#         7
+  C:0067H         LINE#         8
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0082H         SYMBOL        i
+  D:0002H         SYMBOL        m
+  -------         ENDDO         
+  C:0003H         LINE#         9
+  C:0003H         LINE#         10
+  C:0003H         LINE#         12
+  C:0003H         LINE#         13
+  C:0003H         LINE#         14
+  C:0007H         LINE#         16
+  C:000AH         LINE#         17
+  C:000AH         LINE#         18
+  C:000CH         LINE#         19
+  C:0013H         LINE#         20
+  C:0016H         LINE#         21
+  C:0022H         LINE#         22
+  C:0026H         LINE#         23
+  C:0038H         LINE#         24
+  C:0038H         LINE#         25
+  C:003AH         LINE#         26
+  C:0042H         LINE#         27
+  C:0045H         LINE#         28
+  C:0048H         LINE#         30
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        _CROL_篲数实蟔流水灯
+
+Program Size: data=9.0 xdata=0 code=116
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

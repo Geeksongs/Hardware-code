@@ -1,0 +1,119 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/22/2017  23:26:19  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\\C51\BIN\BL51.EXE ÖÆ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ.obj TO ÖÆ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  ÖÆ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ.obj (_Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ)
+  E:\\C51\LIB\C51S.LIB (?C_STARTUP)
+  E:\\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  ÖÆ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ (_Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     007EH     UNIT         ?PR?MAIN?_Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ
+            CODE    0081H     0020H     UNIT         ?PR?_FUN?_Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ
+            CODE    00A1H     0016H     UNIT         ?C?LIB_CODE
+            CODE    00B7H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   ÖÆ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ (_Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ)
+
+
+SEGMENT                                 DATA_GROUP 
+  +--> CALLED SEGMENT                 START    LENGTH
+-----------------------------------------------------
+?C_C51STARTUP                         -----    -----
+  +--> ?PR?MAIN?_Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ
+
+?PR?MAIN?_Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ         0008H    0002H
+  +--> ?PR?_FUN?_Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ
+
+
+
+SYMBOL TABLE OF MODULE:  ÖÆ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ (_Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        _Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2017  23:26:19  PAGE 2
+
+
+  B:0090H.5       PUBLIC        beep
+  C:0003H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0081H         PUBLIC        _fun
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         4
+  C:0003H         LINE#         5
+  C:0003H         LINE#         6
+  C:0009H         LINE#         7
+  C:0009H         LINE#         8
+  C:0009H         LINE#         9
+  C:0021H         LINE#         10
+  C:0023H         LINE#         11
+  C:002AH         LINE#         12
+  C:002CH         LINE#         13
+  C:0033H         LINE#         14
+  C:003BH         LINE#         17
+  C:003DH         LINE#         18
+  C:0044H         LINE#         19
+  C:005CH         LINE#         20
+  C:005CH         LINE#         21
+  C:005EH         LINE#         22
+  C:0065H         LINE#         23
+  C:0067H         LINE#         24
+  C:006EH         LINE#         25
+  C:0076H         LINE#         28
+  C:0078H         LINE#         29
+  C:007FH         LINE#         30
+  -------         ENDPROC       MAIN
+  -------         PROC          _FUN
+  D:0006H         SYMBOL        x
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0081H         LINE#         31
+  C:0081H         LINE#         32
+  C:0081H         LINE#         34
+  C:008CH         LINE#         35
+  C:00A0H         LINE#         36
+  -------         ENDPROC       _FUN
+  -------         ENDMOD        _Æ×÷Ò»¸ö¼òÒ×µÄµç×ÓÇÙ
+
+  -------         MODULE        ?C?SLCMP
+  C:00A1H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+Program Size: data=11.0 xdata=0 code=195
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
